@@ -1,6 +1,6 @@
 {
   "name": "@bett3r/json-schema-to-graphql-types-decorated",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "src/index.js",
   "description": "Convert JSON schema to GraphQL types (string) including GraphQL transforms/directives.",
   "license": "MIT",

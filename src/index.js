@@ -9,11 +9,7 @@ const defaults = {
   }
 }
 
-function buildTypes(schema, config = {}, withTypeMarker = true) {
-  const typeMarker = withTypeMarker
-    ? 'type '
-    : ''
-
+function buildTypes(schema, config = {}, typeMarker = 'type') {
   const indent = config.indentFn || defaults.indentFn
   let {type, properties} = schema
   if (isObject(type)) {
@@ -27,7 +23,7 @@ function buildTypes(schema, config = {}, withTypeMarker = true) {
         : indent
       const propsOutput = propsToOutput({properties, name, config})
       const postFix = indent(indentation)
-      return `${typeMarker}${name} {${propsOutput}${postFix}}\n`
+      return `${typeMarker} ${name} {${propsOutput}${postFix}}\n`
     }
   }
   throw new Error('invalid schema')

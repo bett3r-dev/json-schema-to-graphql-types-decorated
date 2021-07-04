@@ -12,7 +12,7 @@ function toBoolean(obj) {
 
 class MappingBoolean extends MappingBaseType {
   get baseType() {
-    return 'boolean'
+    return 'Boolean'
   }
 
   static create(obj) {
